@@ -1,0 +1,26 @@
+<h1>Registro</h1>
+
+<%=form_with model:@user do |formulario| %>
+
+    <div class="form-group">
+        <%=formulario.label :name%>
+        <%=formulario.text_field :name, class: "form-control"%>
+    </div>
+
+    <div class="form-group">
+        <%=formulario.label :email%>
+        <%=formulario.text_field :email, class: "form-control"%>
+    </div>
+
+    <div class="form-group">
+        <%=formulario.label :password%>
+        <%=formulario.password_field :password, class: "form-control"%>
+    </div>
+
+    <div class="form-group">
+        <%=formulario.label :password_confirmation%>
+        <%=formulario.password_field :password_confirmation, class: "form-control"%>
+    </div>
+
+    <%= formulario.submit "Registrar", class: "btn btn-warning"%>
+<% end %> 
